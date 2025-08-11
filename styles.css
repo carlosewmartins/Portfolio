@@ -68,3 +68,20 @@ main {
 .my_info ul {
     list-style: none;
 }
+
+.label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.const {
+    color: #8259FF
+}
+
+.const_name {
+    color: #00BA6C;
+}
+
+.const_info {
+    color: #FF7878;
+    text-decoration: none;
+}
