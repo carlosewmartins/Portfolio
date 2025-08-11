@@ -5,33 +5,67 @@
     font-family: monospace;
 }
 
-body{
+body {
     background-image: url(assets/img/background.png);
     background-repeat: no-repeat;
     background-size: 100%;
-}
-header p {
-    color: #00BA6C;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.my_name {
-    color: rgba(255, 255, 255, 0.9);
+header {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 0 20px;
+}
+
+header p a {
+    color: #00BA6C;
+    text-decoration: none;
+    
+}
+
+.nav_links {
+    margin-left: 100px;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav_links li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.contact {
+    color: #00BA6C;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+main {
+    padding: 40px 20px;
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.introduction .my_name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.introduction h1.my_name {
+    font-size: 2.5em;
+    margin-bottom: 5px;
 }
 
 .degree {
     color: rgb(130, 89, 255);
-}
-
-.nav_links {
-    list-style: none;
-}
-.nav_links li {
-    display: inline-block;
-}
-.nav_links li a{
-    color: rgba(255,255,255,0.7);
-    transition: all 0.3s ease 0s;
-}
-.nav_links li a:hover{
-    color: rgba(255,255,255);
+    font-weight: bold;
 }
