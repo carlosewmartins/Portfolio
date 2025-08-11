@@ -90,6 +90,56 @@ main {
     text-decoration: none;
 }
 
+footer {
+    border: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vh;
+    color: rgba(0, 186, 108, 0.8);
+}
+
+footer a {
+    color: rgb(0, 186, 108, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+footer a:hover {
+    color: rgb(0, 186, 108, 1);
+}
+
+
 @media (max-width: 768px) {
-    
+
+    header {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh; 
+        padding: 0 1vh;
+    }
+
+    .nav_links {
+        margin-left: 0;
+        gap: 5vh; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    main {
+        margin-top: 5vh;
+        margin-left: 0;
+        padding: 5vh;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .my_info ul {
+        text-align: left;
+        margin-top: 3vh;
+    }
 }
