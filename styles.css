@@ -8,8 +8,11 @@
 body {
     background-image: url(assets/img/background.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: rgba(255, 255, 255, 0.9);
+    min-height: 100vh;
 }
 
 header {
@@ -22,14 +25,13 @@ header {
 header p a {
     color: #00BA6C;
     text-decoration: none;
-    
 }
 
 .nav_links {
     margin-left: 100px;
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
 
 .nav_links li a {
@@ -40,13 +42,6 @@ header p a {
 
 .nav_links li a:hover {
     color: rgba(255, 255, 255, 1);
-}
-
-.contact {
-    color: #00BA6C;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
 }
 
 main {
@@ -68,4 +63,8 @@ main {
 .degree {
     color: rgb(130, 89, 255);
     font-weight: bold;
+}
+
+.my_info ul {
+    list-style: none;
 }
