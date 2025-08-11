@@ -76,7 +76,9 @@ main {
 }
 
 .const {
-    color: #8259FF
+    color: #8259FF;
+    display: inline-block;
+    padding-bottom: 1.2vh;
 }
 
 .const_name {
