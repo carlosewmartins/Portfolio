@@ -2,5 +2,36 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252A;
+    font-family: monospace;
+}
+
+body{
+    background-image: url(assets/img/background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+header p {
+    color: #00BA6C;
+}
+
+.my_name {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.degree {
+    color: rgb(130, 89, 255);
+}
+
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+}
+.nav_links li a{
+    color: rgba(255,255,255,0.7);
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+    color: rgba(255,255,255);
 }
