@@ -91,12 +91,13 @@ main {
 }
 
 footer {
-    border: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vh 3vh;
+    padding: 2rem 3rem;
     color: rgba(0, 186, 108, 0.8);
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 footer a {
