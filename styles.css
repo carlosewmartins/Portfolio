@@ -12,6 +12,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
     overflow: hidden;
 }
 
@@ -43,44 +44,62 @@ header p a {
 }
 
 .nav_links {
-    margin-left: 15vh;
     list-style: none;
     display: flex;
-    gap: 10vh;
+    gap: 2rem;
+    align-items: center;
 }
 
 .nav_links li a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
 .nav_links li a:hover {
     color: rgba(255, 255, 255, 1);
+    background: rgba(0, 186, 108, 0.1);
 }
 
 main {
-    padding: 10vh;
-    margin-top: 200px;
-    margin-left: 200px;
+    margin-top: 80px;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*HOME*/
+#home {
+    text-align: center;
+    padding-top: 6rem;
 }
 
 .introduction .my_name {
     font-size: 1.5em;
     margin-bottom: 1vh;
+    opacity: 0.8;
 }
 
 .introduction h1.my_name {
-    font-size: 2.5em;
-    margin-bottom: 1.5vh;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
 .degree {
     color: rgb(130, 89, 255);
     font-weight: bold;
-    margin-bottom: 1.5vh;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
 }
-
+/*SOBRE*/
 .my_info ul {
     list-style: none;
 }
