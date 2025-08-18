@@ -13,7 +13,7 @@ body {
     background-attachment: fixed;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header {
@@ -74,19 +74,20 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 /*HOME*/
 #home {
     text-align: center;
     padding-top: 6rem;
 }
 
-.introduction .my_name {
+.introduction .my-name {
     font-size: 1.5em;
     margin-bottom: 1vh;
     opacity: 0.8;
 }
 
-.introduction h1.my_name {
+.introduction h1.my-name {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     color: #FFFFFF;
@@ -99,28 +100,61 @@ main {
     margin-bottom: 2rem;
     font-size: 1.3rem;
 }
+
 /*SOBRE*/
-.my_info ul {
+.sobre-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.sobre-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.my-info h3 {
+    color: #00BA6C;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.my-info ul {
     list-style: none;
+}
+
+.my-info li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border-left: 3px solid #00BA6C;
 }
 
 .label {
     color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
 }
 
 .const {
     color: #8259FF;
     display: inline-block;
-    padding-bottom: 1.2vh;
+    padding-bottom: 0.5rem;
 }
 
-.const_name {
+.const-name {
     color: #00BA6C;
 }
 
-.const_info {
+.const-info {
     color: #FF7878;
     text-decoration: none;
+}
+
+.const-info:hover {
+    color: #FF5A5A
 }
 
 footer {
