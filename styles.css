@@ -183,6 +183,75 @@ main {
     color: #FF5A5A
 }
 
+/*PROJETOS*/
+.projeto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.projeto-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(0, 186, 108, 0.2);
+    transition: all 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    border-color: #00BA6C;
+    box-shadow: 0 10px 30px rgba(0, 186, 108, 0.2);
+}
+
+.projeto-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.projeto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.projeto-header h3 {
+    color: #00BA6C;
+    font-size: 1.3rem;
+}
+
+.projeto-link {
+    display: flex;
+    gap: 1rem;
+}
+
+.projeto-link a {
+    color: #00BA6C;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.projeto-link a:hover{
+    color: #009A5A;
+}
+
+.projeto-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-tag {
+    background: rgba(0, 186, 108, 0.2);
+    color: #00BA6C;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 186, 108, 0.3);
+}
+
+/*FOOTER*/
 footer {
     display: flex;
     justify-content: space-between;
