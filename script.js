@@ -1,10 +1,4 @@
-/*const typed = new Typed("#typing", {
-    strings: ["Carlos Eduardo Wille Martins"], // apenas uma string
-    typeSpeed: 90, // velocidade de digitação
-    showCursor: true, // mostra o cursor
-    loop: true // não repete
-});
-*/
+// Função para animação estilo maquina de escrever
 function typeWriter (elemento) {
     const textoArray = elemento.innerHTML.split('');
     elemento.innerHTML = '';
@@ -14,3 +8,24 @@ function typeWriter (elemento) {
 }
 const titulo = document.querySelector("#typing")
 typeWriter(titulo)
+
+// Botão Voltar ao topo
+const backToTopButton = document.getElementById('voltar')
+
+// Mostrar/ocultar botão
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show')
+    } else {
+        backToTopButton.classList.remove('show')
+    }
+});
+
+// Back to top
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
