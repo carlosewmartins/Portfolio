@@ -298,7 +298,7 @@ main {
     color: #00BA6C;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     border: 1px solid rgba(0, 186, 108, 0.3);
 }
 
@@ -335,7 +335,7 @@ main {
     color: rgb(130, 89, 255);
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 2rem;
     border: 1px solid rgba(130, 89, 255, 0.3);
     transition: all 0.3s ease;
 }
@@ -345,6 +345,46 @@ main {
     transform: scale(1.05);
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.habilidade-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 /*CONTATO*/
 .contato-content {
     display: grid;
