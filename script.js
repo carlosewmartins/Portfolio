@@ -54,3 +54,28 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+const navToggle = document.querySelector('.mobile-menu');
+const navMenu = document.getElementById('nav_links');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    const open = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  // Fechar o menu ao clicar em um link
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Se voltar para tela grande, garante que o menu não fique "preso"
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
