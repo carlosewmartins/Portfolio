@@ -54,28 +54,60 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+// Mobile Menu
 const navToggle = document.querySelector('.mobile-menu');
 const navMenu = document.getElementById('nav_links');
 
 if (navToggle && navMenu) {
+  const icon = navToggle.querySelector('i');
+
+  function openMenu() {
+    navMenu.classList.add('open');
+    navToggle.classList.add('is-open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    if (icon) { icon.classList.remove('fa-bars'); icon.classList.add('fa-xmark'); }
+    document.body.style.overflow = 'hidden'; // trava scroll do fundo
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('is-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    if (icon) { icon.classList.remove('fa-xmark'); icon.classList.add('fa-bars'); }
+    document.body.style.overflow = '';
+  }
+
   navToggle.addEventListener('click', () => {
-    const open = navMenu.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-
-  // Fechar o menu ao clicar em um link
-  navMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navMenu.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-
-  // Se voltar para tela grande, garante que o menu não fique "preso"
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      navMenu.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
+    if (navMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
     }
+  });
+
+  // Fechar ao clicar em um link do menu
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMenu);
+  });
+
+  // Fechar ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('open') &&
+        !navMenu.contains(e.target) &&
+        !navToggle.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Fechar com ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
+
+  // Ao voltar para tela grande, fecha o menu
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMenu();
   });
 }
