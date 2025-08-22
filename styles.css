@@ -300,6 +300,7 @@ main {
     border-radius: 20px;
     font-size: 1.6rem;
     border: 1px solid rgba(0, 186, 108, 0.3);
+    position: relative;
 }
 
 /*HABILIDADES*/
@@ -346,28 +347,26 @@ main {
 }
 
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-}
-
-.tooltip {
   visibility: hidden;
-  width: 120px;
-  background-color: #555;
+  min-width: 100px;
+  max-width: 160px;
+  background: rgba(130, 89, 255, 0.9); /* verde principal translúcido */
   color: #fff;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  font-size: 0.85rem;
+  font-family: monospace;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(130, 89, 255, 0.3);
 
   position: absolute;
   z-index: 1;
   top: 125%;
   left: 50%;
-  margin-left: -60px;
-
+  transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s ease;
 }
 
 .tooltip::after {
@@ -375,16 +374,29 @@ main {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -6px;
+  border-width: 6px;
   border-style: solid;
-  border-color: transparent transparent #555 transparent;
+  border-color: transparent transparent rgba(130, 89, 255, 0.9) transparent;
 }
 
+.tech-tag:hover .tooltip,
 .habilidade-item:hover .tooltip {
   visibility: visible;
   opacity: 1;
+  transform: translateX(-50%) translateY(5px);
 }
+
+
+.tooltip.green {
+  background: rgba(0, 186, 108, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 186, 108, 0.3);
+}
+.tooltip.green::after {
+  border-color: transparent transparent rgba(0, 186, 108, 0.9) transparent;
+}
+
+
 /*CONTATO*/
 .contato-content {
     display: grid;
